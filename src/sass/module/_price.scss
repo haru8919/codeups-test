@@ -1,0 +1,131 @@
+@use "global" as *;
+.price {
+  margin-top: 5rem;
+  padding-bottom: 5.2rem;
+  background-color: $green2;
+  @include mq("md") {
+    position: relative;
+    margin-top: 9rem;
+  }
+}
+.price__inner.inner {
+  @include mq("md") {
+    position: relative;
+  }
+}
+.price__title-wrap {
+  padding-top: 5.2rem;
+}
+.price__container {
+  padding-top: 1.5rem;
+  @include mq("md") {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 0;
+    gap: 8%;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 2.13rem;
+  }
+}
+
+.price__img-wrap {
+  @include mq("md") {
+    flex: 1;
+    // margin-left: 5.8rem;
+    // margin-top: 2.1rem;
+  }
+}
+.price__img {
+  @include mq("md") {
+    aspect-ratio: 492/746;
+    width: 100%;
+  }
+}
+.price__content {
+  margin-top: 2.5rem;
+  @include mq("md") {
+    flex: 1;
+    padding-top: 0;
+  }
+}
+
+.price__box.price__box--two {
+  margin-top: 2.69rem;
+}
+.price__box.price__box--three {
+  margin-top: 2.8rem;
+  @include mq("md") {
+    margin-top: 2.79rem;
+  }
+}
+.price__box.price__box--four {
+  margin-top: 2.8rem;
+}
+
+.price__lead {
+  font-size: 1rem;
+  font-weight: $bold;
+  font-family: $third-font-family;
+  line-height: 1.5;
+  color: $black;
+  border-bottom: 1px solid $green;
+  padding-bottom: 0.25rem;
+}
+
+.price__menu {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0.6rem;
+  @include mq("md") {
+    padding-top: 0.39rem;
+  }
+}
+
+.price__name {
+  font-size: 0.875rem;
+  font-weight: $regular;
+  font-family: $third-font-family;
+  line-height: 1.5;
+  color: $black;
+  @include mq("md") {
+    font-size: 1rem;
+  }
+}
+
+.price__cost {
+  font-size: 0.875rem;
+  font-weight: $regular;
+  font-family: $third-font-family;
+  line-height: 1.5;
+  color: $black;
+  @include mq("md") {
+    letter-spacing: 0.075em;
+    padding-left: 1rem;
+  }
+}
+.price__visual-left {
+  @include mq("md") {
+    bottom: 4.1%;
+    content: "";
+    display: block;
+    position: absolute;
+    text-align: left;
+    left: calc(50% - min(28%, 29.1rem));
+    transform: translate(-50%);
+  }
+}
+.price__visual-img {
+  @include mq("md") {
+    display: inline-block;
+    max-width: 27.3125rem;
+    width: 100%;
+  }
+}
+.price__btn-wrap {
+  text-align: center;
+  margin-top: 2.5rem;
+  @include mq("md") {
+    margin-top: 4.3rem;
+  }
+}

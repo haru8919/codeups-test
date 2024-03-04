@@ -1,0 +1,9 @@
+@use "global" as *;
+.vo-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(21rem, 1fr));
+  gap: 2.5rem;
+  @include mq("md") {
+    grid-template-columns: repeat(auto-fit, minmax(21.5rem, 1fr));
+  }
+}

@@ -1,0 +1,27 @@
+@use "global" as *;
+// セクションタイトル
+.section-title {
+  display: inline-block;
+  width: 100%;
+}
+.section-title__main {
+  color: $black;
+  font-family: $base-font-family;
+  font-size: 2rem;
+  line-height: 1.25;
+  text-align: center;
+  @include mq("md") {
+    font-size: 2.5rem;
+  }
+}
+.section-title__main span {
+  color: $green;
+}
+.section-title__sub {
+  color: $green;
+  font-family: $third-font-family;
+  font-size: 0.75rem;
+  font-weight: $regular;
+  line-height: 2.2;
+  text-align: center;
+}

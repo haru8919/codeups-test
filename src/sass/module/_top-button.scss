@@ -1,0 +1,29 @@
+@use "global" as *;
+// トップバックボタン
+.top-button {
+  position: fixed;
+  bottom: -60px; /* 初期状態では画面外に隠れる */
+  right: 10px;
+  color: $green;
+  border: none;
+  cursor: pointer;
+  transition: bottom 0.6s ease; /* ボタンがふわっと表示されるようにトランジションを追加 */
+  z-index: 10;
+  opacity: 0;
+}
+.top-button:hover .top-button__icon {
+  filter: invert(100%);
+}
+.top-button__icon {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  @include mq("md") {
+    width: 80px;
+    height: 80px;
+  }
+}
+.top-button.active {
+  bottom: 6px; /* スクロールすると表示される位置 */
+  opacity: 1;
+}

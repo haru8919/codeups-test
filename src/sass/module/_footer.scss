@@ -1,0 +1,170 @@
+@use "global" as *;
+
+.footer {
+  background-color: $green;
+  padding-bottom: 3.5rem;
+  margin-top: 6.39rem;
+  @include mq("md") {
+    margin-top: 9.62rem;
+    padding-bottom: 5rem;
+  }
+}
+
+.footer-menu {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  right: -100%;
+  opacity: 1;
+  background-color: $green;
+  transition: right 0.3s ease;
+}
+
+.footer__top {
+  padding-top: 3.14rem;
+}
+
+.footer__top-wrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  @include mq("md") {
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+  }
+}
+
+.footer__logo {
+  width: 7.7rem;
+  padding-right: 0.27rem;
+  @include mq("md") {
+    margin: 0;
+    max-width: 12.5rem;
+    width: 100%;
+  }
+}
+
+.footer__top-box {
+  display: flex;
+  margin-top: 1rem;
+  @include mq("md") {
+    margin-left: 2.5rem;
+    width: 100%;
+  }
+}
+
+.footer__icon-facebook {
+  @include mq("md") {
+    height: 2rem;
+    width: 2rem;
+  }
+}
+
+.footer__icon-instagram {
+  padding-left: 1rem;
+  @include mq("md") {
+    height: 2rem;
+  }
+}
+
+.footer-menu__wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.24rem;
+  @include mq("md") {
+    justify-content: flex-start;
+    margin-top: 0.6rem;
+  }
+}
+
+.footer-menu__body {
+  flex: 1;
+  margin-left: 1.7rem;
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.footer-menu__body:not(:first-child) {
+  @include mq("md") {
+    margin-left: 3.6rem;
+  }
+}
+.footer__box-pc {
+  @include mq("md") {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.footer__box-pc:not(:first-child) {
+  @include mq("md") {
+    margin-left: 8.875rem;
+  }
+}
+.footer-menu__items {
+  display: flex;
+  flex-direction: column;
+  @include mq("md") {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.footer-menu__item {
+  font-size: 1rem;
+  font-weight: $regular;
+  color: $white;
+  display: inline-block;
+  text-align: left;
+  padding-top: 1.16rem;
+  transition: 0.6s;
+}
+.footer-menu__item:hover {
+  opacity: 0.7;
+  transition: 0.6s;
+}
+a.footer-menu__item {
+  font-size: 1rem;
+  font-weight: $bold;
+  font-family: $base-font-family;
+  position: relative;
+  text-align: left;
+  margin-top: 1rem;
+  @include mq("md") {
+    margin-top: 0rem;
+  }
+}
+a.footer-menu__item::before {
+  content: url("../images/common/drawer-icon.svg");
+  margin-right: 0.3rem;
+  vertical-align: middle;
+  position: absolute;
+  top: 1.2rem;
+  left: -1.25rem;
+}
+.footer__under-box {
+  margin-top: 1.29rem;
+  @include mq("md") {
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+  }
+}
+.footer__copyright {
+  font-size: 0.75rem;
+  font-family: $base-font-family;
+  line-height: 1.5;
+  color: $white;
+  white-space: nowrap;
+  @include mq("md") {
+    font-size: 0.875rem;
+    line-height: 1.2857;
+  }
+}
+.footer__box-pc--special {
+  @include mq("md") {
+    padding-right: 2rem;
+  }
+}

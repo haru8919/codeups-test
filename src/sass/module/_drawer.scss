@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.drawer-menu {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
+  right: -100%;
+  opacity: 1;
+  background-color: $green;
+  background-attachment: fixed;
+  overflow-x: scroll;
+  transition: right 0.3s ease;
+}
+
+.drawer-menu.is-open {
+  right: 0;
+}
+
+.drawer-menu__inner.inner {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+.drawer-menu__wrapper {
+  padding-top: 4.01rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.drawer-menu__body {
+  margin-left: 0.4rem;
+  display: flex;
+  flex-direction: column;
+}
+.drawer-menu__body:nth-of-type(2) {
+  margin-left: 0.2rem;
+}
+
+.drawer-menu__item {
+  font-size: 1rem;
+  font-weight: $regular;
+  color: $white;
+  display: inline-block;
+  text-align: left;
+  padding-top: 1.3rem;
+}
+a.drawer-menu__item {
+  font-size: 1rem;
+  font-weight: $bold;
+  font-family: $base-font-family;
+  position: relative;
+  text-align: left;
+  margin-top: 0.799rem;
+  padding-left: 0.3rem;
+}
+a.drawer-menu__item::before {
+  content: url("../images/common/drawer-icon.svg");
+  vertical-align: middle;
+  position: absolute;
+  top: 1.56rem;
+  left: -1.25rem;
+}
+.drawer-menu__items {
+  display: flex;
+  flex-direction: column;
+}

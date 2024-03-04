@@ -1,0 +1,19 @@
+@use "global" as *;
+// imgアニメーション
+div.colorbox {
+  position: relative;
+}
+div.colorbox div.color {
+  position: absolute;
+  top: 0;
+  left: 0; /* Fix the position */
+  width: 0%; /* Initial width */
+  height: 100%;
+  z-index: 2;
+  background-color: $green; /* Use a specific color or define $green */
+}
+div.colorbox img {
+  display: block;
+  width: 100%;
+  opacity: 0; /* Initial opacity */
+}

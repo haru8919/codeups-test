@@ -1,0 +1,12 @@
+@use "global" as *;
+.bl-cards {
+  margin-top: 1.5rem;
+  padding-left: 0.3125rem;
+  padding-right: 0.3125rem;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2.5rem;
+  @include mq("md") {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

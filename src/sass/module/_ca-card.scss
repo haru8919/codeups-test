@@ -1,0 +1,101 @@
+@use "global" as *;
+.ca-card {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+  @include mq("md") {
+    max-width: 20.8rem;
+  }
+}
+.ca-card__contents {
+  padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1.29rem;
+  padding-top: 0.99rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1 auto;
+  @include mq("md") {
+    padding-bottom: 1.8rem;
+    padding-top: 1.5rem;
+  }
+}
+
+.ca-card__box {
+  border-bottom: 1px solid $green;
+  flex-grow: 1;
+}
+
+.ca-card__tag {
+  border: 1px solid $green;
+  display: inline-block;
+  padding: 0.179rem 0.75rem;
+  @include mq("md") {
+    padding: 0.29rem 1.1rem;
+  }
+}
+.ca-card__category {
+  color: $green;
+  font-size: 0.75rem;
+  font-weight: $regular;
+  line-height: 1.88;
+  font-family: $second-font-family;
+}
+
+.ca-card__description {
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  padding-top: 0.5rem;
+  padding-bottom: 0.4rem;
+  @include mq("md") {
+    padding-top: 0.5rem;
+  }
+}
+
+.ca-card__container {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include mq("md") {
+    margin-top: 1.21rem;
+  }
+}
+
+.ca-card__price-wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.ca-card__text {
+  font-size: 0.875rem;
+  font-weight: $regular;
+  line-height: 1.5rem;
+  color: $black;
+  @include mq("md") {
+    font-size: 1.03rem;
+  }
+}
+.ca-card__price-out {
+  font-size: 1.25rem;
+  font-weight: $bold;
+  font-family: $four-font-family;
+  text-decoration: line-through red;
+  padding-left: 0.2rem;
+  padding-top: 0.5rem;
+}
+
+.ca-card__price-in {
+  padding-left: 1rem;
+  font-size: 2rem;
+  font-weight: $bold;
+  font-family: $four-font-family;
+  color: $green;
+  @include mq("md") {
+    font-size: 2.43rem;
+    padding-left: 2.6rem;
+  }
+}
